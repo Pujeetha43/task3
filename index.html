@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chocolate Cake Recipe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="recipe-card">
+    <h1>🍰 Chocolate Cake</h1>
+    <img src="images/cake.jpg" alt="Chocolate Cake" class="recipe-image" />
+
+    <div class="info">
+      <p><strong>Preparation Time:</strong> 45 minutes</p>
+      <p><strong>Serving Size:</strong> 6 servings</p>
+    </div>
+
+    <button onclick="toggleSection('ingredients')">Show Ingredients</button>
+    <ul id="ingredients" class="hidden fade-in">
+      <li>2 cups flour</li>
+      <li>1.5 cups sugar</li>
+      <li>1 cup cocoa powder</li>
+      <li>2 eggs</li>
+      <li>1 cup milk</li>
+    </ul>
+
+    <button onclick="startCooking()">Start Cooking</button>
+    <ol id="steps" class="steps hidden fade-in">
+      <li class="step">Preheat the oven to 180°C.</li>
+      <li class="step">Mix dry ingredients.</li>
+      <li class="step">Add wet ingredients and mix.</li>
+      <li class="step">Pour into a pan and bake for 30 minutes.</li>
+      <li class="step">Let it cool and serve.</li>
+    </ol>
+    <button id="nextBtn" class="hidden" onclick="nextStep()">Next</button>
+
+    <div id="timer" class="timer hidden">Timer: 00:00</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
